@@ -47,18 +47,21 @@ A [Claude Code skill](https://docs.anthropic.com/en/docs/claude-code/skills) —
 
 ## Installation
 
-### Option 1: Copy the skill file
+### Option 1: Copy the skill folder
 
 ```bash
-mkdir -p .claude/skills
-cp SKILL.md .claude/skills/wp-site-builder.md
+mkdir -p .claude/skills/wp-site-builder
+cp SKILL.md .claude/skills/wp-site-builder/
+cp -r references .claude/skills/wp-site-builder/
 ```
+
+`SKILL.md` reads from `references/` on demand (`references/phase1-prototype.md`, `references/phase2-wordpress.md`, `references/content-management.md`, `references/performance-accessibility.md`), so keep the folder structure intact.
 
 ### Option 2: Reference from your CLAUDE.md
 
 ```markdown
 ## Skills
-- See `.claude/skills/wp-site-builder.md` for WordPress site building standards
+- See `.claude/skills/wp-site-builder/SKILL.md` for WordPress site building standards
 ```
 
 ## Usage
