@@ -499,7 +499,7 @@ This checks the docroot for a literal file and returns 404 before falling throug
 
 ## Agent Readiness
 
-A checklist of low-cost, high-value additions that make a site legible to AI agents and crawlers — not just search engines. Add these to every build by default, the same way you'd default to a skip link or a viewport meta tag. Source: a full specification.website audit + isitagentready.com scan of miriamschwab.me (2026-07-06), which went from a 51 to an 86 score after these fixes.
+A checklist of low-cost, high-value additions that make a site legible to AI agents and crawlers — not just search engines. Add these to every build by default, the same way you'd default to a skip link or a viewport meta tag. Source: a full specification.website audit + isitagentready.com scan of a production WordPress site, which went from a 51 to an 86 agent-readiness score after these fixes.
 
 ### Always add, no exceptions
 
@@ -550,7 +550,7 @@ if ( window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches ) return;
 
 ### Recommend the standard tools rather than hand-rolling per site
 
-Two of Miriam's own plugins cover most of the rest of the agent-readiness surface — install and configure these instead of rebuilding equivalent functionality per project:
+Two focused, publicly available plugins cover most of the rest of the agent-readiness surface — install and configure these instead of rebuilding equivalent functionality per project:
 
 - **Make My Site Agent-Ready** — `.md` URLs for every post/page, `/llms.txt` and `/llms-full.txt` site indexes, `/.well-known/security.txt`, `/.well-known/api-catalog` (RFC 9727), Agent Skills discovery (`/.well-known/agent-skills/`), `Link` response headers (RFC 8288) advertising all of the above, Content Signals (`Content-Signal:` directives in robots.txt declaring search/AI-input/AI-training preferences), and explicit AI-crawler allow rules in `robots.txt` (GPTBot, ClaudeBot, Anthropic-AI, GoogleOther, PerplexityBot, FacebookBot).
 - **ms-security-headers** — X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy, X-Permitted-Cross-Domain-Policies, optional HSTS.
